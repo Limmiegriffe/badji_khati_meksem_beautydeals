@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="papillon.css">
+    <link rel="stylesheet" href="pageaccessoires.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="cssjs.css">
+    <link rel="stylesheet" href="acheter.css">
+    <title>Accessoires</title>
+</head>
+
+<body>
+
+
+    <div class="sidebar">
+        <h2> Beauty Deals </h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="pagemakeup.html">Notre page Makeup</a></li>
+                <li><a href="pagefits.html">Notre page Fits</a></li>
+                <li><a href="pageaccessoires.html">Notre page Accessoires</a></li>
+                <li><a href="deco.html">Notre page Deco</a></li>
+                <li><a href="ecobeauty.html">Eco Beauty</a></li>
+                <li><a href="authentification.html">Connectez vous a votre compte</a>
+                <li><a href="inscription.html">Créez un compte</a> 
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="main-content">
+        <header class="banner">
+            <h1> Accessoires</h1>
+            <img src="image\accessoires.webp" alt="Image banniere ">
+        </header>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <p>Produit ajouter au panier !. Voulez-vous acceder a la page panier ?</p>
+                <button id="btnOui">Oui </button>
+                <button id="btnNon">Non </button>
+            </div>
+        </div>
+
+       <div id="popup2" class="popup-overlay">
+    <div class="popup-box">
+      <span class="close" onclick="fermerPopup()">&times;</span>
+      <h2>Combien de produits souhaitez-vous ?</h2>
+      <input type="number" id="quantite2" min="1" placeholder="Quantité" />
+      <button onclick="calculerTotal()">Calculer</button>
+      <p id="resultat"></p>
+      <div id="questionInscription" style="display: none;">
+        <p>Etes-vous deja inscrit(e) ?</p>
+        <button onclick="rediriger(true)">Oui</button>
+        <button onclick="rediriger(false)">Non</button>
+      </div>
+    </div>
+  </div> 
+
+        <div class="description">
+            <p>
+                Bienvenue dans notre univers d'accessoires tendance et irrésistiblement cute ! Ici, chaque pièce est
+                choisie
+                avec soin pour ajouter une touche de magie à ton look.
+            </p>
+            <div class="tri-container">
+                <label for="tri">Trier par :</label>
+                <select id="tri" onchange="trierProduits()">
+                    <option value="prix-asc">Prix : bas en haut</option>
+                    <option value="prix-desc">Prix : haut a bas</option>
+                    <option value="nom-asc">Nom : de A à Z</option>
+                    <option value="nom-desc">Nom :de Z à A</option>
+                </select>
+            </div>
+
+            <section class="conteneur-produits">
+
+                <div class="produit" data-prix="1.50" id="25">
+                    <img src="image\pignette.jpg" alt="Pince a cheveux">
+                    <div class="contenu">
+                        <h4> Pince a chveveux en forme d'etoile hyper tendence</h4>
+                        <p> prix : 1.50$ </p>
+                        <button onclick="ouvrirPopup(this)" data-prix="1.50"> Acheter </button> <button class="ajouter-panier" onclick="ajouterproduitpince()">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="produit" data-prix="5" id="26">
+                    <img src="image\noeud.jpg" alt="Noeud papillon">
+                    <div class="contenu">
+                        <h4>Noeud papillon chic</h4>
+                        <p> prix : 5$ </p>
+                        <button onclick="ouvrirPopup(this)" data-prix="5"> Acheter </button> <button class="ajouter-panier" onclick="ajouterproduitnoeud()">Ajouter au panier</button>
+                    </div>
+                </div>
+
+
+                <div class="produit" data-prix="0.99" id="27">
+                    <img src="image\boucle.jpg" alt="Boucles d'oreilles">
+                    <div class="contenu">
+                        <h4> Boucles d'oreilles preppy en forme d'etoiles</h4>
+                        <p> prix : <s>4.99</s> 0.99$ </p>
+                        <button onclick="ouvrirPopup(this)" data-prix="0.99"> Acheter </button> <button class="ajouter-panier" onclick="ajouterproduitboucles()">Ajouter au panier</button>
+                    </div>
+                </div>
+
+
+                <div class="produit" data-prix="7.50" id="28">
+                    <img src="image\collier.jpg" alt="parure_coquette">
+                    <div class="contenu">
+                        <h4> Parure coquette [edition limitée] </h4>
+                        <p> prix : 7.50 </p>
+                        <button onclick="ouvrirPopup(this)" data-prix="7.50"> Acheter </button> <button class="ajouter-panier" onclick="ajouterproduitparure()">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="produit" data-prix="6" id="29">
+                    <img src="image\bracelet.jpg" alt="Bracelet">
+                    <div class="contenu">
+                        <h4> Bracelet </h4>
+                        <p> prix : 6$ </p>
+                        <button onclick="ouvrirPopup(this)" data-prix="6"> Acheter </button> <button class="ajouter-panier" onclick="ajouterproduitbracelet()">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="produit" data-prix="14" id="30">
+                    <img src="image\sac.jpg" alt="Sac miumiu">
+                    <div class="contenu">
+                        <h4> Sac miumiu a la mode </h4>
+                        <p> prix : <s>30</s> 14$ </p>
+                        <button onclick="ouvrirPopup(this)" data-prix="14"> Acheter </button> <button class="ajouter-panier" onclick="ajouterproduitsac()">Ajouter au panier </button>
+                    </div>
+                </div>
+
+        </div>
+
+
+
+        </section>
+
+
+        <a href="index.html" class="retour">← Retour à l'accueil</a>
+
+    
+
+        <div class="section-speciale">
+        <p> *L'image de la bannière a été générée par l'IA.<br>
+            *Toutes les photos utilisées sont libres de droits et employées à des fins pedagogiques.
+        </p>
+
+        <li>Email: <a href="mailto:informatique@fgei.ummto">fgei.ummto</a></li>
+        <li>Phone: +213 775 755 777</li>
+        <a href="inscrption.html" class="different"> rejoigner nous en vous inscrivons gratuitement a notre site !</a>
+
+    </div>
+    <script src="trie.js"></script>
+    <script src="ajouterpanier.js"></script>
+    <div class="papillon-container" id="papillon-container">
+    </div>
+
+
+    <script src="papillon.js"></script>
+    <script src="ajouteraupanier2.js"></script>
+    <script src="acheter.js"></script>
+
+
+    </div>
+
+</body>
+
+</html>

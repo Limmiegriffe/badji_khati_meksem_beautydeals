@@ -1,0 +1,131 @@
+
+body {
+  margin: 0;
+  font-family: 'Courier New';
+  background-color: #fbe2ee;
+  color: #000000;
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #ffc3e0;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 5px #f596da;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sidebar h2 {
+  color:#f596da ; 
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 20px;
+}
+
+.sidebar ul a {
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
+  color: #a63d91dd;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 10px;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar ul a:hover {
+  background-color: #ffdaf1;
+  color: #ff96dc;
+}
+
+.main-content {
+  margin-left: 200px;
+  padding: 40px;
+  flex: 1;
+}
+
+header h1 {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 2.5em;
+  color: #a63d91dd;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+
+.selection {
+  background: linear-gradient(#ffffff, #fff);
+  font-family: 'Courier New', Courier, monospace;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.selection p {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 25px;
+  background-color: #a63d91dd;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #e754a3;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+

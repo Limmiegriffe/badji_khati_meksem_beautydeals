@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>authentification</title>
+    <link rel="stylesheet" href="authentification.css">
+    <link rel="stylesheet" href="papillon.css"> 
+    <link rel="stylesheet" href="sidebar.css">
+  </head>
+  <body>
+
+    <div class="sidebar">
+      <h2> Beauty Deals </h2>
+      <nav>
+          <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="pagemakeup.html">Notre page Makeup</a></li>
+              <li><a href="pagefits.html">Notre page Fits</a></li>
+              <li><a href="pageaccessoires.html">Notre page Accessoires</a></li>
+              <li><a href="deco.html">Notre page Deco</a></li>
+              <li><a href="ecobeauty.html">Eco Beauty</a></li>
+              <li><a href="authentification.html">Connectez vous a votre compte</a></li>
+              <li><a href="inscription.html">Créez un compte</a></li> 
+              <li><a href="panier.html">Mon Panier</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+
+          </ul>
+      </nav>
+  </div>
+    <table>
+        <tr>
+          <td>
+            <fieldset>
+              <h1>Welcome back!</h1>
+              <h2>Connectez vous a votre compte</h2>
+  
+              <form action="post" method="post" onsubmit="validateForm(event)">
+                <label for="username">Nom d'utilisateur :</label>
+                <input type="text" id="username" name="username" placeholder="Veuillez entrer votre nom d'utilisateur" required /><br /><br />
+                
+                <label for="email">Votre compte Gmail :</label>
+                <input type="email" id="email" name="email" placeholder="Veuillez entrer votre compte Gmail" required /><br /><br />
+  
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" placeholder="Veuillez entrer votre mot de passe " required /><br /><br />
+                
+                <a href="#">Mot de passe oublié?</a><br /><br />
+                
+                <label for="address">Votre adresse de livraison :</label>
+                <input type="text" id="address" name="address" placeholder="Veuillez entrer votre adresse de livraison" required /><br /><br />
+                
+                <label for="cardnumber">Votre numéro de carte bancaire  :</label>
+                <input type="number" id="cardnumber" name="cardnumber" placeholder="Veuillez entrer votre numéro de carte bancaire" required /><br /><br />
+                
+                <label for="cardcvv">Code de carte bancaire :</label>
+                <input type="number" id="cardcvv" name="cardcvv" placeholder="Veuillez entrer votre code de carte bancaire" required /><br /><br />
+                
+                <label for="confirmcardcvv">Confirmer votre code de carte bancaire :</label>
+                <input type="number" id="confirmcardcvv" name="confirmcardcvv" placeholder="Veuillez confirmer votre code de carte bancaire" required /><br /><br />
+                
+                <label for="remember">Se rappeler de moi</label><br /><br />
+                <input type="checkbox" id="remember" name="remember"/>
+                
+                
+                <button type="submit">Confirmer votre achat  </button><br /><br />
+              </form>
+            </fieldset>
+          </td>
+        </tr>
+      </table>
+      
+      
+    <div class="papillon-container" id="papillon-container">
+        <!-- Le SVG sera ajouté ici par JavaScript -->
+    </div>
+
+
+    <script src="papillon.js"></script> <!-- Lien vers le JavaScript -->
+    
+    <script src="controlle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.papillon-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transform: translateX(-50%);
+    width: 150px;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+}
+
+path {
+    stroke: rgb(181, 221, 93);
+    stroke-width: 2;
+    fill: none;
+}
+
+.wing {
+    transform-origin: center;
+    animation: flutter 0.5s infinite alternate ease-in-out;
+}
+
+@keyframes flutter {
+    0% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}

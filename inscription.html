@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription</title>
+    <link rel="stylesheet" href="inscription.css" />
+    <link rel="stylesheet" href="papillon.css" />
+    <link rel="stylesheet" href="sidebar.css">
+  </head>
+  <body>
+
+    <div class="sidebar">
+      <h2> Beauty Deals </h2>
+      <nav>
+          <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="pagemakeup.html">Notre page Makeup</a></li>
+              <li><a href="pagefits.html">Notre page Fits</a></li>
+              <li><a href="pageaccessoires.html">Notre page Accessoires</a></li>
+              <li><a href="deco.html">Notre page Deco</a></li>
+              <li><a href="ecobeauty.html">Eco Beauty</a></li>
+              <li><a href="authentification.html">Connectez vous a votre compte</a>
+              <li><a href="inscription.html">Créez un compte</a>
+              <li><a href="panier.html">Mon Panier</a></li>  
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+          </ul>
+      </nav>
+  </div>
+   
+    <table>
+      <tr>
+        <td>
+          <fieldset>
+            <h1>Bienvenue !</h1>
+            <h3>Créer un compte</h3>
+
+            <form action="traitement_auth.php" method="post" enctype="multipart/form-data">
+              <label for="nom">Nom :</label>
+              <input type="text" id="nom" name="nom" placeholder="Veuillez entrez votre nom" required /><br /><br />
+
+              <label for="prenom">Prénom :</label>
+              <input type="text" id="prenom" name="prenom" placeholder="Veuillez entrez votre prénom" required /><br /><br />
+
+              <label for="date_naissance">Date de naissance :</label>
+              <input type="date" id="date_naissance" name="date_naissance" required /><br /><br />
+
+              <label for="email">Adresse Email :</label>
+              <input type="email" id="email" name="email" placeholder="Veuillez entrez votre email" required /><br /><br />
+
+              <label for="telephone">Numéro de téléphone :</label>
+              <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro" required /><br /><br />
+
+              <label for="adresse">Adresse :</label>
+              <input type="text" id="adresse" name="adresse" placeholder="Entrez votre adresse" required /><br /><br />
+
+              <label for="ville">Ville :</label>
+              <input type="text" id="ville" name="ville" placeholder="Entrez votre ville" required /><br /><br />
+
+              <label for="code_postal">Code postal :</label>
+              <input type="text" id="code_postal" name="code_postal" placeholder="Entrez votre code postal" required /><br /><br />
+
+              <label for="wilaaya">Wilaya :</label>
+              <input type="number" id="wilaaya" name="wilaaya" placeholder="Entrez votre wilaya" required /><br /><br />
+
+              <label for="mot_de_passe">Mot de passe :</label>
+              <input type="password" id="mot_de_passe" name="mot_de_passe" placeholder="Entrez un mot de passe" required /><br /><br />
+
+              <label for="confirm_mot_de_passe">Confirmer mot de passe :</label>
+              <input type="password" id="confirm_mot_de_passe" name="confirm_mot_de_passe" placeholder="Confirmez votre mot de passe" required /><br /><br />
+
+              <button type="submit">S'inscrire </button><br /><br />
+              <p>
+                Vous avez déjà un compte ?
+                <a href="authentification.html">Connectez-vous ici</a>
+              </p>
+            </form>
+          </fieldset>
+        </td>
+      </tr>
+    </table>
+
+    <div class="papillon-container" id="papillon-container">
+      <!-- Le SVG des papillons sera ajouté ici -->
+    </div>
+
+    <script src="papillon.js"></script>
+    <script src="controlle.js"></script>
+  
+  </body>
+</html>
